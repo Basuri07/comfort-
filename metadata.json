@@ -1,0 +1,6 @@
+{
+  "name": "Cozy Comfort Room",
+  "description": "A magical, interactive cozy space filled with love, cute mascots, stress-relievers, custom playlists, and comforting warm letters. Built with lots of care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

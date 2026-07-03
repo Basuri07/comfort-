@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300..900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Cozy custom keyframes and utility classes */
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes rain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway 6s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-float-heart {
+  animation: float-heart 1.5s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+/* Notebook lines pattern for Open When notes */
+.bg-notebook-lines {
+  background-image: linear-gradient(#b8daff 1px, transparent 1px);
+  background-size: 100% 24px;
+}
+
+/* Raindrops utility */
+.rain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  background: linear-gradient(transparent, rgba(147, 197, 253, 0.4));
+  width: 1.5px;
+  height: 25px;
+  animation: rain 1s linear infinite;
+}
+
+/* Fairy lights glowing effect */
+.glow-yellow {
+  box-shadow: 0 0 10px #fef08a, 0 0 20px #fef08a;
+}
+.glow-pink {
+  box-shadow: 0 0 10px #fbcfe8, 0 0 20px #fbcfe8;
+}
+.glow-blue {
+  box-shadow: 0 0 10px #bfdbfe, 0 0 20px #bfdbfe;
+}
+.glow-purple {
+  box-shadow: 0 0 10px #e9d5ff, 0 0 20px #e9d5ff;
+}
+
+/* General scrollbar adjustments for a rounded, cozy feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fbcfe8;
+  border-radius: 99px;
+}
+
+/* Heartbeat and Warm Glow Somatic Animations for Virtual Hug */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.08); }
+  28% { transform: scale(1.02); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse-soft-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.2), 0 0 30px rgba(244, 63, 94, 0.1);
+    opacity: 0.85;
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.5), 0 0 60px rgba(244, 63, 94, 0.3);
+    opacity: 1;
+  }
+}
+
+@keyframes breathing-chest {
+  0%, 100% {
+    transform: scale(0.96);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-soft-glow 3s infinite ease-in-out;
+}
+
+.animate-breathing {
+  animation: breathing-chest 4.5s infinite ease-in-out;
+}
+
+/* Somatic Hugging Visual Haptics */
+@keyframes comfort-vignette {
+  0%, 100% {
+    box-shadow: inset 0 0 60px rgba(244, 63, 94, 0.15), inset 0 0 120px rgba(244, 63, 94, 0.08);
+  }
+  50% {
+    box-shadow: inset 0 0 160px rgba(244, 63, 94, 0.5), inset 0 0 320px rgba(244, 63, 94, 0.3);
+  }
+}
+
+@keyframes warm-ambient-glow {
+  0%, 100% {
+    background-color: rgb(24, 20, 20);
+  }
+  50% {
+    background-color: rgb(34, 20, 25);
+  }
+}
+
+@keyframes arm-embrace-left {
+  0%, 100% {
+    transform: translateX(-15%) scale(0.95) rotate(-5deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateX(0%) scale(1.05) rotate(0deg);
+    opacity: 0.35;
+  }
+}
+
+@keyframes arm-embrace-right {
+  0%, 100% {
+    transform: translateX(15%) scale(0.95) rotate(5deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateX(0%) scale(1.05) rotate(0deg);
+    opacity: 0.35;
+  }
+}
+
+.animate-comfort-vignette {
+  animation: comfort-vignette 4.5s infinite ease-in-out;
+}
+
+.animate-warm-ambient-glow {
+  animation: warm-ambient-glow 6s infinite ease-in-out;
+}
+
+.animate-arm-left {
+  animation: arm-embrace-left 5s infinite ease-in-out;
+}
+
+.animate-arm-right {
+  animation: arm-embrace-right 5s infinite ease-in-out;
+}
+
+
